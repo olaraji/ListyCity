@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -70,6 +71,12 @@ public class CustomList extends ArrayAdapter<City> {
         return list;
     }
     public void hasCity(City city){
+        if(cities.contains(city)){
+            System.out.println("City is present");
+        }else{
+            System.out.println("City not present");
+            throw new IllegalArgumentException();
+        }
 
     }
 
