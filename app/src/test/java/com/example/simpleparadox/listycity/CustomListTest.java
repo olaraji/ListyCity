@@ -7,6 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class CustomListTest {
     private CustomList list;
@@ -15,6 +17,7 @@ public class CustomListTest {
     public void createList(){
         list = new CustomList(null, new ArrayList<>());
     }
+
     @Test
     public void addCityTest(){
         int listSize = list.getCount();
@@ -22,12 +25,14 @@ public class CustomListTest {
         assertEquals(listSize + 1, list.getCount());
 
     }
+
     @Test
-    void testHasCity() {
+    public void deleteCityTest() {
         int listSize = list.getCount();
-        assertEquals(1, list.getCount());
-        City city = new City("Calgary", "Alberta");
-        list.hasCity(city);
-        assertEquals(listSize+1, list.getCount());
+        City city = new City("Toronto", "Ontario");
+        list.addCity(city);
+        list.deleteCity(city);
+        assertEquals(listSize, list.getCount());
+//        assertTrue(list.getCities().contains(city));
     }
 }

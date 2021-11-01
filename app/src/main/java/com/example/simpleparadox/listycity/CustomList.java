@@ -13,6 +13,8 @@ import androidx.annotation.Nullable;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class CustomList extends ArrayAdapter<City> {
 
@@ -53,9 +55,14 @@ public class CustomList extends ArrayAdapter<City> {
     }
     public void addCity(City city){
         cities.add(city);
-
     }
-    public void hasCity(City city){
 
+    public void deleteCity(City city){
+//        if (cities.contains(city)){
+//            cities.remove(city);
+//        }else{
+//            throw new IllegalArgumentException();
+//        }
     }
+
 }
