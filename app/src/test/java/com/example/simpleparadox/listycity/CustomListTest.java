@@ -33,6 +33,5 @@ public class CustomListTest {
         list.addCity(city);
         list.deleteCity(city);
         assertEquals(listSize, list.getCount());
-//        assertTrue(list.getCities().contains(city));
     }
 }
