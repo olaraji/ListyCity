@@ -10,11 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class CustomList extends ArrayAdapter<City> {
 
@@ -63,6 +59,11 @@ public class CustomList extends ArrayAdapter<City> {
         }else{
             throw new IllegalArgumentException();
         }
+    }
+    public int countCities(){
+//        return cities.size();
+
+        return 0;
     }
 
 }
